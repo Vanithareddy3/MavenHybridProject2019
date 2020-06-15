@@ -29,7 +29,19 @@ public class SearchDDTTest extends TestBase {
 		
 	}
 
-@Test(dataProvider = "dp")
+  @BeforeClass
+  public void beforeClass() throws IOException {
+	  initializeTheBrowser();
+	  hmpg=new LinkedinHomePage();
+	  lpg=new LinkedinLoginPage();
+	  lggpg=new LinkedinLoggedInPage();
+	  srpg=new SearchResultsPage();
+	  hmpg.clickOnSignInLink();
+	  lpg.login(prop.getProperty("username"),prop.getProperty("pwd"));
+	  
+  }
+
+  @Test(dataProvider = "dp")
   public void searchTest(String s) throws InterruptedException, IOException {
 	Assert.assertTrue(lggpg.verifyprofileCard());
 	lggpg.searchPeople(s);
@@ -44,17 +56,6 @@ public class SearchDDTTest extends TestBase {
      
     return data;  
     
-  }
-  @BeforeClass
-  public void beforeClass() throws IOException {
-	  initializeTheBrowser();
-	  hmpg=new LinkedinHomePage();
-	  lpg=new LinkedinLoginPage();
-	  lggpg=new LinkedinLoggedInPage();
-	  srpg=new SearchResultsPage();
-	  hmpg.clickOnSignInLink();
-	  lpg.login(prop.getProperty("username"),prop.getProperty("pwd"));
-	  
   }
 
   @AfterClass
