@@ -61,7 +61,7 @@ public class TestUtil extends TestBase{
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
 		//copy to project location
-		FileUtils.copyFile(src, new File(System.getProperty("user.dir")+"\\src\\Screenshots\\"+"screenshot_"+timeStamp()+".png"));
+		FileUtils.copyFile(src, new File(System.getProperty("user.dir")+"/src/Screenshots/"+"screenshot_"+timeStamp()+".png"));
 	}
 	public static String timeStamp() {
 		return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
