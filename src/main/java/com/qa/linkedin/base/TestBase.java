@@ -31,7 +31,7 @@ public class TestBase {
 		
 		//read the config.properties file
 		try {
-			FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\/src\/main\/java\/com\/qa\/linkedin\/config\/config.properties");
+			FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/qa/linkedin/config/config.properties");
 			//load all the properties
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
