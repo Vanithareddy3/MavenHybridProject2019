@@ -44,7 +44,7 @@ public class SearchDDTTest extends TestBase {
   @Test
   public void searchTest(String s) throws InterruptedException, IOException {
 	Assert.assertTrue(lggpg.verifyprofileCard());
-	lggpg.searchPeople('praneeth');
+	lggpg.searchPeople("praneeth");
 	int cnt=srpg.getResultsCount();
 	System.out.println("results count for" +s+"is--->"+cnt);
 	driver.navigate().back();
