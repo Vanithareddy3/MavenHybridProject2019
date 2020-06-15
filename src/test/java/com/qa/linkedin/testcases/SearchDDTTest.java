@@ -41,24 +41,23 @@ public class SearchDDTTest extends TestBase {
 	  
   }
 
-  @Test(dataProvider = "dp")
+  @Test
   public void searchTest(String s) throws InterruptedException, IOException {
 	Assert.assertTrue(lggpg.verifyprofileCard());
-	lggpg.searchPeople(s);
+	lggpg.searchPeople('praneeth');
 	int cnt=srpg.getResultsCount();
 	System.out.println("results count for" +s+"is--->"+cnt);
 	driver.navigate().back();
   }
-
+/*
   @DataProvider
   public Object[][] dp() throws IOException {
   //  Object[][] data=TestUtil.getTestData(TestUtil.TESTDATA_SHEET_PATH1, "Sheet1");
-  Object[][] data= new Object [1][1];
-  data[1][1] = 'praneeth'
+ 
      
     return data;  
     
-  }
+  }*/
 
   @AfterClass
   public void afterClass() {
