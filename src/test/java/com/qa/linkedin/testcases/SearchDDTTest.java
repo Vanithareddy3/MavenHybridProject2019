@@ -35,12 +35,12 @@ public class SearchDDTTest extends TestBase {
 	  hmpg=new LinkedinHomePage();
 	  lpg=new LinkedinLoginPage();
 	  lggpg=new LinkedinLoggedInPage();
-	 // srpg=new SearchResultsPage();
+	  srpg=new SearchResultsPage();
 	  hmpg.clickOnSignInLink();
 	  lpg.login(prop.getProperty("username"),prop.getProperty("pwd"));
 	  
   }
-/*
+
   @Test(dataProvider = "dp")
   public void searchTest(String s) throws InterruptedException, IOException {
 	Assert.assertTrue(lggpg.verifyprofileCard());
@@ -52,12 +52,13 @@ public class SearchDDTTest extends TestBase {
 
   @DataProvider
   public Object[][] dp() throws IOException {
-    Object[][] data=TestUtil.getTestData(TestUtil.TESTDATA_SHEET_PATH1, "Sheet1");
+  //  Object[][] data=TestUtil.getTestData(TestUtil.TESTDATA_SHEET_PATH1, "Sheet1");
+  Object[][] data=['praneeth'];
      
     return data;  
     
   }
-*/
+
   @AfterClass
   public void afterClass() {
 	  lggpg.logOut();
