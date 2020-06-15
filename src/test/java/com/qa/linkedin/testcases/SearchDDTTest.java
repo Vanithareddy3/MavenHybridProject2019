@@ -53,7 +53,8 @@ public class SearchDDTTest extends TestBase {
   @DataProvider
   public Object[][] dp() throws IOException {
   //  Object[][] data=TestUtil.getTestData(TestUtil.TESTDATA_SHEET_PATH1, "Sheet1");
-  Object[][] data=['praneeth'];
+  Object[][] data= new Object [1][1];
+  data[1][1] = 'praneeth'
      
     return data;  
     
